@@ -40,33 +40,46 @@
         <tr><td>Trades</td><td>3,497</td><td>3,583</td><td>523</td><td>3,078</td></tr>
     </table>
 
-    <div class="img">
-        <h2>Log-scale Equity Curve 2023–2025 (NQ Futures)</h2>
-        <img src="https://imgur.com/7zQQwdj" alt="Log-scale equity curve"> <!-- ←←← YOUR LINK HERE -->
+    <!-- CAROUSEL START -->
+    <div class="carousel" id="chartCarousel">
+        <div class="slides">
+            <div class="slide"><img src="https://i.imgur.com/7zQQwdj.png" alt="NQ 2023-2025"><div class="caption">Log-scale Equity Curve – NQ Futures 2023-2025</div></div>
+            <div class="slide"><img src="https://i.imgur.com/Koq8hkx.png" alt="NQ Heatmap"><div class="caption">Monthly Returns Heat-map – NQ Futures 2023-2025 • 66.7 % positive months</div></div>
+            <div class="slide"><img src="https://i.imgur.com/NRKFDIQ.png" alt="BTC 12m"><div class="caption">Log-scale Equity Curve – BTCUSDT Perpetual (12 months)</div></div>
+            <div class="slide"><img src="https://i.imgur.com/rbvAtLi.png" alt="BTC Heatmap"><div class="caption">Monthly Returns Heat-map – BTCUSDT Perpetual</div></div>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">❮</button>
+        <button class="next" onclick="plusSlides(1)">❯</button>
+        <div class="dots"></div>
     </div>
-
-    <div class="img">
-        <h2>Monthly Returns Heat-map (NQ Futures 2023-2025)</h2>
-        <img src="https://imgur.com/Koq8hkx" alt="Monthly heat-map"> <!-- ←←← YOUR LINK HERE -->
-    </div>
-
-    <div class="img">
-        <h2>Log-scale Equity Curve - 12 MONTHS (BTCUSDT Perpetual)</h2>
-        <img src="https://imgur.com/NRKFDIQ" alt="Log-scale equity curve"> <!-- ←←← YOUR LINK HERE -->
-    </div>
-
-    <div class="img">
-        <h2>Monthly Returns Heat-map (BTCUSDT Perpetual 12 MONTHS)</h2>
-        <img src="https://imgur.com/rbvAtLi" alt="Monthly heat-map"> <!-- ←←← YOUR LINK HERE -->
-    </div>
-
+    <!-- CAROUSEL END -->
 
     <div class="box">
-        <p>100 % rules-based • Identical parameters on NQ and BTCUSDT • Positive expectancy in every regime since 200#8</p>
+        <p>100 % rules-based • Identical parameters on NQ and BTCUSDT • Positive expectancy in every regime since 2008</p>
         <p style="font-size:1.4em;margin:30px 0;">Two perpetual licences remaining • Sealed bids close 31 January 2026</p>
         <a href="mailto:hello@quanticorn.com?subject=Quanticorn%20Licence%20Bid" class="btn">Submit Bid →</a>
         <div class="small">hello@quanticorn.com</div>
     </div>
 </div>
+
+<style>
+.carousel{position:relative;max-width:100%;margin:60px auto;overflow:hidden;border-radius:12px;box-shadow:0 0 30px rgba(0,255,150,0.2);}
+.slides{display:flex;transition:transform 0.6s ease-in-out;}
+.slide{flex:0 0 100%;position:relative;}
+.slide img{width:100%;display:block;}
+.caption{position:absolute;bottom:20px;left:0;right:0;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;font-size:1.1em;}
+.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:#fff;border:none;padding:16px;font-size:2em;cursor:pointer;z-index:10;}
+.prev{left:0;border-radius:0 8px 8px 0;}
+.next{right:0;border-radius:8px 0 0 8px;}
+.prev:hover,.next:hover{background:#00ff9d;color:#000;}
+.dots{text-align:center;margin-top:15px;}
+.dots span{display:inline-block;width:12px;height:12px;margin:0 6px;background:#333;border-radius:50%;cursor:pointer;transition:background 0.3s;}
+.dots span.active{background:#00ff9d;}
+</style>
+
+<script>
+let slideIndex=0;const slides=document.querySelector('.slides');const dotsContainer=document.querySelector('.dots');const totalSlides=document.querySelectorAll('.slide').length;for(let i=0;i<totalSlides;i++){const dot=document.createElement('span');dot.onclick=()=>currentSlide(i);dotsContainer.appendChild(dot);}function showSlides(n){if(n>=totalSlides)n=0;if(n<0)n=totalSlides-1;slideIndex=n;slides.style.transform=`translateX(${-n*100}%)`;document.querySelectorAll('.dots span').forEach((d,idx)=>d.classList.toggle('active',idx===n));}function plusSlides(n){showSlides(slideIndex+n);}function currentSlide(n){showSlides(n);}setInterval(()=>plusSlides(1),7000);showSlides(slideIndex);
+</script>
 </body>
 </html>
+
