@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quanticorn Alpha – 2 Perpetual Licences</title>
+    <title>Quanticorn Alpha – Live Demonstration Available</title>
     <style>
         body{font-family:Arial,sans-serif;margin:0;background:#0a0a0a;color:#eee;line-height:1.7;}
         .c{max-width:1100px;margin:0 auto;padding:20px;}
         .hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);}
         h1{font-size:3.2em;margin:0;letter-spacing:1px;}
-        h2{margin-top:40px;color:#00ff9d;}
+        h2{margin:50px 0 8px 0;color:#00ff9d;font-size:2.2em;text-align:center;}
         table{width:100%;border-collapse:collapse;margin:40px 0;background:#111;}
         th,td{padding:14px;text-align:center;border:1px solid #333;}
         th{background:#16213e;color:#00ff9d;}
-        .img{text-align:center;margin:50px 0;}
-        .img img{max-width:100%;border-radius:8px;box-shadow:0 0 20px rgba(0,255,150,0.2);}
-        .box{background:#111;padding:40px;border-radius:12px;text-align:center;margin:60px 0;}
-        .btn{display:inline-block;background:#00ff9d;color:#000;padding:18px 50px;font-size:1.3em;font-weight:bold;text-decoration:none;border-radius:8px;}
-        .small{font-size:0.9em;color:#aaa;margin-top:30px;}
+        .box{background:#111;padding:50px;border-radius:12px;text-align:center;margin:80px 0;box-shadow:0 0 30px rgba(0,255,150,0.15);}
+        .btn{display:inline-block;background:#00ff9d;color:#000;padding:20px 60px;font-size:1.5em;font-weight:bold;text-decoration:none;border-radius:8px;margin:20px 0;}
+        .small{font-size:0.95em;color:#aaa;margin-top:30px;}
+        .highlight{color:#00ff9d;font-weight:bold;}
+
+        /* Carousel */
+        .carousel{position:relative;max-width:100%;margin:60px auto;overflow:hidden;border-radius:12px;box-shadow:0 0 30px rgba(0,255,150,0.2);}
+        .slides{display:flex;transition:transform 0.6s ease-in-out;}
+        .slide{flex:0 0 100%;position:relative;}
+        .slide img{width:100%;display:block;}
+        .caption{position:absolute;bottom:20px;left:0;right:0;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;font-size:1.1em;}
+        .prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:#fff;border:none;padding:16px;font-size:2em;cursor:pointer;z-index:10;}
+        .prev{left:0;border-radius:0 8px 8px 0;}
+        .next{right:0;border-radius:8px 0 0 8px;}
+        .prev:hover,.next:hover{background:#00ff9d;color:#000;}
+        .dots{text-align:center;margin-top:15px;}
+        .dots span{display:inline-block;width:12px;height:12px;margin:0 6px;background:#333;border-radius:50%;cursor:pointer;transition:background 0.3s;}
+        .dots span.active{background:#00ff9d;}
     </style>
 </head>
 <body>
@@ -25,15 +38,16 @@
     <div class="hero">
         <h1>QUANTICORN</h1>
         <p style="font-size:1.5em;">NQ + BTCUSDT Intraday Alpha • Fully automated • Zero discretion</p>
-        <p style="font-size:1.2em;margin-top:20px;">Two perpetual licences remaining • Sealed bids close 31 January 2026</p>
+        <p style="font-size:2.1em;margin-top:30px;color:#00ff9d;font-weight:bold;">
+            Live demonstration available
+        </p>
     </div>
 
-    <h2 style="margin:50px 0 8px 0; color:#00ff9d; font-size:2.2em; text-align:center;">
-        Elite performance metrics across every regime since 2008
-    </h2>
-    <p style="margin:0 0 25px 0; text-align:center; color:#eee; font-size:1.15em; opacity:0.9;">
+    <h2>Elite performance metrics across every regime since 2008</h2>
+    <p style="text-align:center;opacity:0.9;font-size:1.15em;margin-bottom:30px;">
         Fixed 2R reward-to-risk on every trade
     </p>
+
     <table>
         <tr><th></th><th>NQ<br>2023-2025</th><th>NQ COVID<br>2020-21</th><th>NQ GFC<br>2008-09</th><th>BTCUSDT<br>2023/24 (1-yr)</th></tr>
         <tr><td>CAGR</td><td>108 %</td><td>152 %</td><td>20 %</td><td>396 %</td></tr>
@@ -45,56 +59,61 @@
         <tr><td>Trades</td><td>3,497</td><td>3,583</td><td>523</td><td>3,078</td></tr>
     </table>
 
-    <!-- CAROUSEL START -->
+    <!-- CAROUSEL -->
     <div class="carousel" id="chartCarousel">
         <div class="slides">
             <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image1_nq_equity_v2.png" alt="NQ 2023-2025"><div class="caption">Log-scale Equity Curve – NQ Futures 2023-2025</div></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image2_nq_heatmap_v2.png"><div class="caption">Monthly Returns Heat-map – NQ Futures 2023-2025 • 66.7 % positive months</div></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image2_nq_heatmap_v2.png" alt="NQ Heatmap"><div class="caption">Monthly Returns Heat-map – NQ Futures 2023-2025 • 66.7 % positive months</div></div>
             <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image3_btc_equity_v2.png" alt="BTC 12m"><div class="caption">Log-scale Equity Curve – BTCUSDT Perpetual (12 months)</div></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image4_btc_heatmap_v2.png"><div class="caption">Monthly Returns Heat-map – BTCUSDT Perpetual</div></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image4_btc_heatmap_v2.png" alt="BTC Heatmap"><div class="caption">Monthly Returns Heat-map – BTCUSDT Perpetual</div></div>
         </div>
         <button class="prev" onclick="plusSlides(-1)">❮</button>
         <button class="next" onclick="plusSlides(1)">❯</button>
         <div class="dots"></div>
     </div>
-    <!-- CAROUSEL END -->
 
     <div class="box">
         <p>100 % rules-based • Identical parameters on NQ and BTCUSDT • Positive expectancy in every regime since 2008</p>
-        <p style="font-size:1.4em;margin:30px 0;">Two perpetual licences remaining • Sealed bids close 31 January 2026</p>
-        <p style="font-size:1.0em;margin:30px 0;">Minimum bid $25M</p>
-        <a href="mailto:bid@quanticorn.com?subject=Quanticorn%20Licence%20Bid" class="btn">Submit Bid →</a>
-        <div class="small">Sealed bids: bid@quanticorn.com<br>All other enquiries: hello@quanticorn.com</div>
+        <p style="font-size:1.25em;margin:35px 0;">
+            Demonstrable edge in other futures and spot markets as well — <span class="highlight">FOREX / METALS / AGS</span>
+        </p>
+        <p style="font-size:2.1em;margin:40px 0;color:#00ff9d;font-weight:bold;">
+            LIVE demonstration available
+        </p>
+        <p style="font-size:1.5em;margin:20px 0;">
+            Book one now → <a href="mailto:hello@quanticorn.com" style="color:#00ff9d;text-decoration:underline;">hello@quanticorn.com</a>
+        </p>
+        <div class="small">All enquiries: hello@quanticorn.com</div>
     </div>
 </div>
 
-<style>
-.carousel{position:relative;max-width:100%;margin:60px auto;overflow:hidden;border-radius:12px;box-shadow:0 0 30px rgba(0,255,150,0.2);}
-.slides{display:flex;transition:transform 0.6s ease-in-out;}
-.slide{flex:0 0 100%;position:relative;}
-.slide img{width:100%;display:block;}
-.caption{position:absolute;bottom:20px;left:0;right:0;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;font-size:1.1em;}
-.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:#fff;border:none;padding:16px;font-size:2em;cursor:pointer;z-index:10;}
-.prev{left:0;border-radius:0 8px 8px 0;}
-.next{right:0;border-radius:8px 0 0 8px;}
-.prev:hover,.next:hover{background:#00ff9d;color:#000;}
-.dots{text-align:center;margin-top:15px;}
-.dots span{display:inline-block;width:12px;height:12px;margin:0 6px;background:#333;border-radius:50%;cursor:pointer;transition:background 0.3s;}
-.dots span.active{background:#00ff9d;}
-</style>
-
 <script>
-let slideIndex=0;const slides=document.querySelector('.slides');const dotsContainer=document.querySelector('.dots');const totalSlides=document.querySelectorAll('.slide').length;for(let i=0;i<totalSlides;i++){const dot=document.createElement('span');dot.onclick=()=>currentSlide(i);dotsContainer.appendChild(dot);}function showSlides(n){if(n>=totalSlides)n=0;if(n<0)n=totalSlides-1;slideIndex=n;slides.style.transform=`translateX(${-n*100}%)`;document.querySelectorAll('.dots span').forEach((d,idx)=>d.classList.toggle('active',idx===n));}function plusSlides(n){showSlides(slideIndex+n);}function currentSlide(n){showSlides(n);}setInterval(()=>plusSlides(1),7000);showSlides(slideIndex);
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const dotsContainer = document.querySelector('.dots');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.onclick = () => currentSlide(i);
+    dotsContainer.appendChild(dot);
+}
+
+function showSlides(n) {
+    if (n >= totalSlides) n = 0;
+    if (n < 0) n = totalSlides - 1;
+    slideIndex = n;
+    slides.style.transform = `translateX(${-n * 100}%)`;
+    document.querySelectorAll('.dots span').forEach((d, idx) => 
+        d.classList.toggle('active', idx === n)
+    );
+}
+
+function plusSlides(n) { showSlides(slideIndex + n); }
+function currentSlide(n) { showSlides(n); }
+
+setInterval(() => plusSlides(1), 7000);
+showSlides(slideIndex);
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
