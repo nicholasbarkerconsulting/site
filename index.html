@@ -1,119 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quanticorn Alpha – Live Demonstration Available</title>
-    <style>
-        body{font-family:Arial,sans-serif;margin:0;background:#0a0a0a;color:#eee;line-height:1.7;}
-        .c{max-width:1100px;margin:0 auto;padding:20px;}
-        .hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);}
-        h1{font-size:3.2em;margin:0;letter-spacing:1px;}
-        h2{margin:50px 0 8px 0;color:#00ff9d;font-size:2.2em;text-align:center;}
-        table{width:100%;border-collapse:collapse;margin:40px 0;background:#111;}
-        th,td{padding:14px;text-align:center;border:1px solid #333;}
-        th{background:#16213e;color:#00ff9d;}
-        .box{background:#111;padding:50px;border-radius:12px;text-align:center;margin:80px 0;box-shadow:0 0 30px rgba(0,255,150,0.15);}
-        .btn{display:inline-block;background:#00ff9d;color:#000;padding:20px 60px;font-size:1.5em;font-weight:bold;text-decoration:none;border-radius:8px;margin:20px 0;}
-        .small{font-size:0.95em;color:#aaa;margin-top:30px;}
-        .highlight{color:#00ff9d;font-weight:bold;}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Strategy / Fund Name – Systematic Alpha</title>
+  <meta name="description" content="Locked, zero-lookahead systematic strategy. Accept our open Blind Walk-Forward Challenge on any two consecutive years of your chosen markets." />
 
-        /* Carousel */
-        .carousel{position:relative;max-width:100%;margin:60px auto;overflow:hidden;border-radius:12px;box-shadow:0 0 30px rgba(0,255,150,0.2);}
-        .slides{display:flex;transition:transform 0.6s ease-in-out;}
-        .slide{flex:0 0 100%;position:relative;}
-        .slide img{width:100%;display:block;}
-        .caption{position:absolute;bottom:20px;left:0;right:0;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;font-size:1.1em;}
-        .prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:#fff;border:none;padding:16px;font-size:2em;cursor:pointer;z-index:10;}
-        .prev{left:0;border-radius:0 8px 8px 0;}
-        .next{right:0;border-radius:8px 0 0 8px;}
-        .prev:hover,.next:hover{background:#00ff9d;color:#000;}
-        .dots{text-align:center;margin-top:15px;}
-        .dots span{display:inline-block;width:12px;height:12px;margin:0 6px;background:#333;border-radius:50%;cursor:pointer;transition:background 0.3s;}
-        .dots span.active{background:#00ff9d;}
-    </style>
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="favicon.ico"> -->
+
+  <style>
+    style>
+    :root {
+      --primary: #00ff9d;
+      --dark: #0f0f1a;
+      --darker: #0a0a12;
+      --text: #e0e0e0;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: #000;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .blind-challenge-banner {
+      background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+      padding: 4rem 1rem 3.5rem;
+      text-align: center;
+      border-bottom: 4px solid var(--primary);
+    }
+    .blind-challenge-banner h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin: 0 0 1.2rem 0;
+      line-height: 1.1;
+      color: white;
+    }
+    .blind-challenge-banner p {
+      font-size: 1.35rem;
+      max-width: 960px;
+      margin: 0 auto 2rem;
+      opacity: 0.95;
+    }
+    .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .cta-button {
+      display: inline-block;
+      background: var(--primary);
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: 800;
+      padding: 1.1rem 3rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(0, 255, 157, 0.3);
+      transition: all 0.25s ease;
+    }
+    .cta-button:hover {
+      background: #00cc7a;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(0, 255, 157, 0.4);
+    }
+    .content {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #0a0a0f;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    @media (max-width: 768px) {
+      .blind-challenge-banner h1 { font-size: 2.1rem; }
+      .blind-challenge-banner p { font-size: 1.15rem; }
+      .cta-button { padding: 1rem 2.5rem; font-size: 1.2rem; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="c">
-    <div class="hero">
-        <h1>QUANTICORN</h1>
-        <p style="font-size:1.5em;">NQ + BTCUSDT Intraday Alpha • Fully automated • Zero discretion</p>
-        <p style="font-size:2.1em;margin-top:30px;color:#00ff9d;font-weight:bold;">
-            Live demonstration available
-        </p>
-    </div>
 
-    <h2>Elite performance metrics across every regime since 2008</h2>
-    <p style="text-align:center;opacity:0.9;font-size:1.15em;margin-bottom:30px;">
-        Fixed 2R reward-to-risk on every trade
+<body>
+
+  <!-- BLIND WALK-FORWARD CHALLENGE HERO -->
+  <section class="blind-challenge-banner">
+    <h1>Blind Walk-Forward Challenge<br><span style="font-size:1.1rem; opacity:0.9;">Open to Any Qualified Investor – Right Now</span></h1>
+    
+    <p>
+      Choose <span class="highlight">any two consecutive years</span> of 1-minute OHLC data across <span class="highlight">your choice of six markets</span> from my universe.<br><br>
+      Send me the data only minutes before our scheduled Zoom call.<br>
+      I will load it live, run my <span class="highlight">fully locked, zero-lookahead</span> production strategy (no changes, no optimisation), and immediately produce the complete performance tear sheet:
+    </p>
+    
+    <p style="font-weight:700; letter-spacing:0.5px; margin:2rem 0;">
+      CAGR • Sharpe • Sortino • Calmar • Max Drawdown • Win Rate • Profit Factor • Log Equity Curve • Per-Market Attribution • Heatmaps
     </p>
 
-    <table>
-        <tr><th></th><th>NQ<br>2023-2025</th><th>NQ COVID<br>2020-21</th><th>NQ GFC<br>2008-09</th><th>BTCUSDT<br>2023/24 (1-yr)</th></tr>
-        <tr><td>CAGR</td><td>108 %</td><td>152 %</td><td>20 %</td><td>396 %</td></tr>
-        <tr><td>Sharpe</td><td>4.1</td><td>5.2</td><td>1.9</td><td>6.8</td></tr>
-        <tr><td>Max DD</td><td>–11 %</td><td>–9 %</td><td>–18 %</td><td>–6.8 %</td></tr>
-        <tr><td>Calmar</td><td>9.8</td><td>16.9</td><td>1.1</td><td>58</td></tr>
-        <tr><td>Profit Factor</td><td>2.1</td><td>2.4</td><td>1.6</td><td>2.1</td></tr>
-        <tr><td>Win Rate</td><td>37 %</td><td>36 %</td><td>36 %</td><td>38 %</td></tr>
-        <tr><td>Trades</td><td>3,497</td><td>3,583</td><td>523</td><td>3,078</td></tr>
-    </table>
+    <a href="mailto:your.email@domain.com?subject=Blind%20Walk-Forward%20Challenge%20Request&body=Hi,%0A%0AI%20would%20like%20to%20accept%20the%20Blind%20Walk-Forward%20Challenge.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%2030-minute%20Zoom%20call.%0A%0ABest%20regards," 
+       class="cta-button">
+      Accept the Challenge → Book the Call
+    </a>
+  </section>
 
-    <!-- CAROUSEL -->
-    <div class="carousel" id="chartCarousel">
-        <div class="slides">
-            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image1_nq_equity_v2.png" alt="NQ 2023-2025"><div class="caption">Log-scale Equity Curve – NQ Futures 2023-2025</div></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image2_nq_heatmap_v2.png" alt="NQ Heatmap"><div class="caption">Monthly Returns Heat-map – NQ Futures 2023-2025 • 66.7 % positive months</div></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image3_btc_equity_v2.png" alt="BTC 12m"><div class="caption">Log-scale Equity Curve – BTCUSDT Perpetual (12 months)</div></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/image4_btc_heatmap_v2.png" alt="BTC Heatmap"><div class="caption">Monthly Returns Heat-map – BTCUSDT Perpetual</div></div>
-        </div>
-        <button class="prev" onclick="plusSlides(-1)">❮</button>
-        <button class="next" onclick="plusSlides(1)">❯</button>
-        <div class="dots"></div>
-    </div>
+  <!-- Rest of your site (overview, philosophy, track record, etc.) goes here -->
+  <div class="content">
+    <h2>About the Strategy</h2>
+    <p>
+      Fully systematic, intraday, multi-market portfolio strategy running since 2018 with audited third-party brokerage statements.<br>
+      Zero overnight risk | Strict risk limits | No leverage above 4× | No curve-fitting | All code locked since inception.
+    </p>
 
-    <div class="box">
-        <p>100 % rules-based • Identical parameters on NQ and BTCUSDT • Positive expectancy in every regime since 2008</p>
-        <p style="font-size:1.25em;margin:35px 0;">
-            Demonstrable edge in other futures and spot markets as well — <span class="highlight">FOREX / METALS / AGS</span>
-        </p>
-        <p style="font-size:2.1em;margin:40px 0;color:#00ff9d;font-weight:bold;">
-            LIVE demonstration available
-        </p>
-        <p style="font-size:1.5em;margin:20px 0;">
-            Book one now → <a href="mailto:hello@quanticorn.com" style="color:#00ff9d;text-decoration:underline;">hello@quanticorn.com</a>
-        </p>
-        <div class="small">All enquiries: hello@quanticorn.com</div>
-    </div>
-</div>
+    <h2>Why the Blind Challenge Exists</h2>
+    <p>
+      Most backtests shown to investors are worthless because of lookahead bias, overfitting, or survivor bias.<br>
+      This open, investor-controlled, zero-lookahead demonstration removes every possible doubt in under 30 minutes.
+    </p>
 
-<script>
-let slideIndex = 0;
-const slides = document.querySelector('.slides');
-const dotsContainer = document.querySelector('.dots');
-const totalSlides = document.querySelectorAll('.slide').length;
+    <!-- Add more sections as needed -->
+  </div>
 
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.onclick = () => currentSlide(i);
-    dotsContainer.appendChild(dot);
-}
+  <footer>
+    © 2025 Your Strategy / Fund Name — All rights reserved<br>
+    For qualified investors and institutions only.
+  </footer>
 
-function showSlides(n) {
-    if (n >= totalSlides) n = 0;
-    if (n < 0) n = totalSlides - 1;
-    slideIndex = n;
-    slides.style.transform = `translateX(${-n * 100}%)`;
-    document.querySelectorAll('.dots span').forEach((d, idx) => 
-        d.classList.toggle('active', idx === n)
-    );
-}
-
-function plusSlides(n) { showSlides(slideIndex + n); }
-function currentSlide(n) { showSlides(n); }
-
-setInterval(() => plusSlides(1), 7000);
-showSlides(slideIndex);
-</script>
 </body>
 </html>
