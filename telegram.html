@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quanticorn Alpha – Blind Walk-Forward Challenge Open</title>
+    <style>
+        body{font-family:Arial,sans-serif;margin:0;background:#0a0a0a;color:#eee;line-height:1.7;}
+        .c{max-width:1100px;margin:0 auto;padding:20px;}
+        .hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);}
+        h1{font-size:3.2em;margin:0;letter-spacing:1px;}
+        h2{margin:50px 0 8px 0;color:#00ff9d;font-size:2.2em;text-align:center;}
+        table{width:100%;border-collapse:collapse;margin:40px 0;background:#111;}
+        th,td{padding:14px;text-align:center;border:1px solid #333;}
+        th{background:#16213e;color:#00ff9d;}
+        .box{background:#111;padding:50px;border-radius:12px;text-align:center;margin:80px 0;box-shadow:0 0 30px rgba(0,255,150,0.15);}
+        .btn{display:inline-block;background:#00ff9d;color:#000;padding:20px 60px;font-size:1.5em;font-weight:bold;text-decoration:none;border-radius:8px;margin:20px 0;}
+        .small{font-size:0.95em;color:#aaa;margin-top:30px;}
+        .highlight{color:#00ff9d;font-weight:bold;}
+
+        /* Carousel */
+        .carousel{position:relative;max-width:100%;margin:60px auto;overflow:hidden;border-radius:12px;box-shadow:0 0 30px rgba(0,255,150,0.2);}
+        .slides{display:flex;transition:transform 0.6s ease-in-out;}
+        .slide{flex:0 0 100%;position:relative;}
+        .slide img{width:100%;display:block;}
+        .caption{position:absolute;bottom:20px;left:0;right:0;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;font-size:1.1em;}
+        .prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:#fff;border:none;padding:16px;font-size:2em;cursor:pointer;z-index:10;}
+        .prev{left:0;border-radius:0 8px 8px 0;}
+        .next{right:0;border-radius:8px 0 0 8px;}
+        .prev:hover,.next:hover{background:#00ff9d;color:#000;}
+        .dots{text-align:center;margin-top:15px;}
+        .dots span{display:inline-block;width:12px;height:12px;margin:0 6px;background:#333;border-radius:50%;cursor:pointer;transition:background 0.3s;}
+        .dots span.active{background:#00ff9d;}
+    </style>
+</head>
+<body>
+<div class="c">
+    <div class="hero">
+        <h1>QUANTICORN</h1>
+
+        <!-- New top lines -->
+        <p style="font-size:1.4em;max-width:900px;margin:24px auto 0;color:#00ff9d;font-weight:bold;">
+            NQ AND BTC INTRADAY TRADING ALPHA
+        </p>
+        <p style="font-size:1.15em;max-width:900px;margin:12px auto 0;">
+            100 % rules-based · Zero discretion · Fully automated
+        </p>
+        
+        <p style="font-size:2.2em;margin-top:40px;color:#00ff9d;font-weight:bold;line-height:1.4;">
+            Blind Walk-Forward Demonstration<br>Available Now
+        </p>
+        <p style="font-size:1.45em;max-width:900px;margin:30px auto 0;line-height:1.5;">
+            On a live call, provide us any two consecutive years 1-minute OHLC data for
+            NQ futures or BTC futures or BTC spot and we will load it live on Zoom,
+            run the data blind through the <strong>locked zero-lookahead</strong> strategy with no changes whatsoever,
+            and deliver the complete tear sheet in real time.
+        </p>
+        <p style="margin-top:35px;">
+            <a href="mailto:hello@quanticorn.com?subject=Book%20a%20Demo" 
+               style="background:#00ff9d;color:#000;padding:18px 50px;font-size:1.6em;font-weight:bold;text-decoration:none;border-radius:10px;">
+                Book a Demo Now
+            </a>
+        </p>
+    </div>
+
+    <h2>Elite performance metrics across every regime since 2008</h2>
+    <p style="text-align:center;opacity:0.9;font-size:1.15em;margin-bottom:30px;">
+        Fixed RR on every trade
+    </p>
+
+    <table>
+        <tr><th></th><th>NQ<br>2023-25</th><th>NQ COVID<br>2020-21</th><th>NQ GFC<br>2008-09</th><th>BTCUSDT<br>2023-25</th></tr>
+        <tr><td>Sharpe</td><td>2.3</td><td>1.61</td><td>-0.01</td><td>0.6</td></tr>
+        <tr><td>CAGR</td><td>228 %</td><td>139 %</td><td>17.2 %</td><td>37.2 %</td></tr>
+        <tr><td>Max Neg Months</td><td>2</td><td>3</td><td>1</td><td>3</td></tr>
+        <tr><td>Trades</td><td>12,079</td><td>4,287</td><td>27</td><td>5715</td></tr>
+        <tr><td>Avg net / trade (R)</td><td>0.057</td><td>0.046</td><td>0.067</td><td>0.02</td></tr>
+    </table>
+
+    <!-- CAROUSEL – can be updated later with new curves/metrics -->
+    <div class="carousel" id="chartCarousel">
+        <div class="slides">
+            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/NQ-2020-2025-Equity-With-Costs.png" alt="NQ 2020-2025"><div class="caption">Linear PnL Equity Plot Gross and Net – NQ Futures 2020-2025</div></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/NQ-2020-2025-Heat-Map-With-Costs.png" alt="NQ Heatmap"><div class="caption">Monthly Returns Heat-map net of costs– NQ Futures 2020-2025 • 78.7% positive months</div></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/BTC-FUT-2018-2025-Equity-With-Costs.png" alt="BTC Futures 2018-2025"><div class="caption">Linear PnL Equity Plot Gross and Net – BTCUSDT Perpetual 2018-2025</div></div>
+            <div class="slide"><img src="https://raw.githubusercontent.com/nicholasbarkerconsulting/site/main/BTC-FUT-2018-2025-HEAT-MAP-With-Costs.png" alt="BTC Heatmap 2018-2025"><div class="caption">Monthly Returns Heat-map net of costs BTCUSDT Single Rule Set for entire 2018-2025 • 58.1% positive months</div></div>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">Previous</button>
+        <button class="next" onclick="plusSlides(1)">Next</button>
+        <div class="dots"></div>
+    </div>
+
+    <div class="box">
+        <p style="font-size:1.25em;margin:10px 0 10px;">
+            100 % rules-based • Fully stress tested 2008/9 GFC | 2020/21 COVID | Modern volatility
+        </p>
+        <p style="font-size:1.25em;margin:0 0 30px 0;">
+            Positive expectancy in every regime
+        </p>
+        <p style="font-size:1.7em;margin:25px 0;color:#00ff9d;font-weight:bold;">
+            Ready to see it in action?
+        </p>
+        <p style="font-size:1.5em;margin:20px 0;">
+            <a href="mailto:hello@quanticorn.com?subject=Book%20a%20Demo" style="background:#00ff9d;color:#000;padding:16px 45px;font-weight:bold;text-decoration:none;border-radius:10px;">
+                Book a Demo Now
+            </a>
+        </p>
+        <div class="small">All enquiries: <a href="mailto:hello@quanticorn.com" style="color:#00ff9d;text-decoration:underline;">hello@quanticorn.com</a></div>
+    </div>
+</div>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const dotsContainer = document.querySelector('.dots');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.onclick = () => currentSlide(i);
+    dotsContainer.appendChild(dot);
+}
+
+function showSlides(n) {
+    if (n >= totalSlides) n = 0;
+    if (n < 0) n = totalSlides - 1;
+    slideIndex = n;
+    slides.style.transform = `translateX(${-n * 100}%)`;
+    document.querySelectorAll('.dots span').forEach((d, idx) => 
+        d.classList.toggle('active', idx === n)
+    );
+}
+
+function plusSlides(n) { showSlides(slideIndex + n); }
+function currentSlide(n) { showSlides(n); }
+
+setInterval(() => plusSlides(1), 7000);
+showSlides(slideIndex);
+</script>
+</body>
+</html>
+
