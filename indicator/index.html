@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quanticorn | Price Inefficiency Indicator</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #0a0a0a; color: #eee; font-family: 'Inter', Arial, sans-serif; }
+        .glow-green { text-shadow: 0 0 10px rgba(0, 255, 157, 0.5); }
+        .card { background: #111; border: 1px solid #333; transition: all 0.3s ease; }
+        .card:hover { border-color: #00ff9d; box-shadow: 0 0 20px rgba(0, 255, 157, 0.1); }
+        .nav-link:hover { color: #00ff9d; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="border-b border-gray-800 p-4 sticky top-0 bg-black z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold tracking-tighter text-white no-underline">
+                <span class="text-[#00ff9d]">Q</span>UANTICORN
+            </a>
+            <div class="space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="/" class="nav-link text-gray-300 no-underline">Alpha</a>
+                <a href="/indicator/" class="text-[#00ff9d] no-underline">Indicator</a>
+                <a href="/telegram/" class="nav-link text-gray-300 no-underline">Signals</a>
+                <a href="mailto:indicator@quanticorn.com" class="nav-link text-gray-300 no-underline">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 text-center bg-gradient-to-b from-[#16213e] to-black">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            Price Inefficiency <span class="text-[#00ff9d] glow-green">Detection</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+            The official quantitative model for NQ, ES, MNQ, and MES.
+            Identify institutional liquidity gaps and high-probability trade setups in real-time.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="#pricing" class="bg-[#00ff9d] text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#05d686] no-underline">
+                Get Access Now
+            </a>
+            <a href="#how-to" class="border border-gray-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 text-white no-underline">
+                How it Works
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="max-w-6xl mx-auto py-20 px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card p-8 rounded-2xl">
+                <i class="fas fa-microchip text-[#00ff9d] text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Quantitative Model</h3>
+                <p class="text-gray-400 text-sm">
+                    Based on the same locked zero-lookahead logic used in our institutional alpha backtests.
+                </p>
+            </div>
+            <div class="card p-8 rounded-2xl">
+                <i class="fas fa-bullseye text-[#00ff9d] text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Detection Labels</h3>
+                <p class="text-gray-400 text-sm">
+                    Real-time on-chart labels for price inefficiencies, entries, partials, and exits.
+                </p>
+            </div>
+            <div class="card p-8 rounded-2xl">
+                <i class="fas fa-discord text-[#00ff9d] text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">P-Settings & Discord</h3>
+                <p class="text-gray-400 text-sm">
+                    Access the latest p-settings and support in the official Discord for all supported timeframes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-[#050505]">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-16">
+                Choose Your <span class="text-[#00ff9d]">License</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Monthly -->
+                <div class="card p-10 rounded-3xl relative overflow-hidden">
+                    <h3 class="text-2xl font-bold mb-4">Monthly Pass</h3>
+                    <div class="text-5xl font-bold mb-6">
+                        $47 <span class="text-lg text-gray-500">/mo</span>
+                    </div>
+                    <ul class="text-left space-y-4 mb-10 text-gray-300 text-sm">
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> Full indicator access</li>
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> NQ / ES / MNQ / MES supported</li>
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> Detection labels & trade setup table</li>
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> Discord community & official p-settings</li>
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> Cancel anytime</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/fZudRaaOZbgh80Tf9W5gc07"
+                       class="block w-full bg-white text-black py-4 rounded-xl font-bold hover:bg-gray-200 no-underline">
+                        Subscribe Monthly
+                    </a>
+                    <p class="text-xs text-gray-500 mt-4">
+                        TradingView username requested at checkout.
+                    </p>
+                </div>
+                <!-- Annual -->
+                <div class="card p-10 rounded-3xl border-[#00ff9d] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-[#00ff9d] text-black text-xs font-bold px-4 py-1 rounded-bl-lg uppercase">
+                        Best Value
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Annual License</h3>
+                    <div class="text-5xl font-bold mb-6">
+                        $470 <span class="text-lg text-gray-500">/yr</span>
+                    </div>
+                    <p class="text-[#00ff9d] font-bold mb-6">
+                        12 months for the price of 10 (17%+ savings)
+                    </p>
+                    <ul class="text-left space-y-4 mb-10 text-gray-300 text-sm">
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> All Monthly Pass features</li>
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> Priority Discord support</li>
+                        <li><i class="fas fa-check text-[#00ff9d] mr-2"></i> Long-term access locked in</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/cNifZig9j3NP3KD5zm5gc08"
+                       class="block w-full bg-[#00ff9d] text-black py-4 rounded-xl font-bold hover:bg-[#05d686] no-underline">
+                        Get Annual Access
+                    </a>
+                    <p class="text-xs text-gray-500 mt-4">
+                        TradingView username requested at checkout.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Flow Section -->
+    <section id="how-to" class="max-w-4xl mx-auto py-20 px-4">
+        <h2 class="text-3xl font-bold mb-10 text-center">How Access Works</h2>
+        <div class="space-y-8">
+            <div class="flex gap-6">
+                <div class="bg-[#111] w-12 h-12 rounded-full flex items-center justify-center font-bold text-[#00ff9d] border border-[#333] shrink-0">1</div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Pay via Stripe</h4>
+                    <p class="text-gray-400">
+                        Use the same email as your TradingView account if possible.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div class="bg-[#111] w-12 h-12 rounded-full flex items-center justify-center font-bold text-[#00ff9d] border border-[#333] shrink-0">2</div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Enter Your TradingView Username</h4>
+                    <p class="text-gray-400">
+                        Add it in the custom field on the checkout page.
+                        If you forget, no problem – you'll receive instructions by email and in Discord to submit it later.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div class="bg-[#111] w-12 h-12 rounded-full flex items-center justify-center font-bold text-[#00ff9d] border border-[#333] shrink-0">3</div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">We Whitelist You</h4>
+                    <p class="text-gray-400">
+                        Whitelisting is usually completed within 12 hours (often faster).
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div class="bg-[#111] w-12 h-12 rounded-full flex items-center justify-center font-bold text-[#00ff9d] border border-[#333] shrink-0">4</div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Access the Script</h4>
+                    <p class="text-gray-400">
+                        The indicator appears in TradingView under
+                        <strong>Indicators → Invite-only scripts</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto py-20 px-4 bg-[#050505] rounded-2xl">
+        <h2 class="text-3xl font-bold mb-10 text-center">Questions?</h2>
+        <div class="space-y-6">
+            <div>
+                <h4 class="text-lg font-bold text-[#00ff9d] mb-2">What if I forget my TradingView username?</h4>
+                <p class="text-gray-400">
+                    After checkout you'll receive an email with instructions.
+                    You can also post your username in the Discord <strong>#access</strong> channel and we'll whitelist you from there.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-[#00ff9d] mb-2">What timeframes does it work on?</h4>
+                <p class="text-gray-400">
+                    The indicator is optimized for 1min / 3min / 5min charts on NQ, ES, MNQ, and MES futures.
+                    You have access to the latest p-settings for each of these timeframes via the Discord.
+                    It can be used on other timeframes, but the signals are calibrated for the supported timeframes only.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-[#00ff9d] mb-2">Is there a refund policy?</h4>
+                <p class="text-gray-400">
+                    Monthly subscriptions can be cancelled anytime going forward.
+                    For questions about payments, contact
+                    <a href="mailto:indicator@quanticorn.com" class="text-[#00ff9d] underline">
+                        indicator@quanticorn.com
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Quanticorn Alpha. All rights reserved.</p>
+        <p class="mt-2">
+            <a href="mailto:indicator@quanticorn.com" class="text-[#00ff9d] hover:underline">
+                indicator@quanticorn.com
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
