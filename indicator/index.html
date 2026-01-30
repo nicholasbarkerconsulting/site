@@ -14,40 +14,91 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background-color: #0a0a0a; color: #eee; font-family: 'Inter', Arial, sans-serif; }
+        body { 
+            background-color: #0a0a0a; 
+            color: #eee; 
+            font-family: 'Inter', Arial, sans-serif;
+            overflow-x: hidden;
+        }
         .glow-green { text-shadow: 0 0 10px rgba(0, 255, 157, 0.5); }
         .card { background: #111; border: 1px solid #333; transition: all 0.3s ease; }
         .card:hover { border-color: #00ff9d; box-shadow: 0 0 20px rgba(0, 255, 157, 0.1); }
         .nav-link:hover { color: #00ff9d; }
+        
+        /* Mobile hamburger menu */
+        .nav-burger { display: none; }
+        .nav-mobile {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px 20px 16px;
+            background: #000;
+            border-bottom: 1px solid #333;
+        }
+        .nav-mobile a {
+            color: #eee;
+            text-decoration: none;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+        .nav-mobile a.active { color: #00ff9d; }
+        
+        @media (max-width: 768px) {
+            .nav-desktop { display: none !important; }
+            .nav-burger {
+                display: block;
+                background: none;
+                border: none;
+                color: #eee;
+                font-size: 1.6em;
+                cursor: pointer;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="border-b border-gray-800 p-4 sticky top-0 bg-black z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
             <a href="/" class="text-2xl font-bold tracking-tighter text-white no-underline">
                 <span class="text-[#00ff9d]">Q</span>UANTICORN
             </a>
-            <div class="space-x-8 text-sm font-medium uppercase tracking-widest">
+            
+            <!-- Desktop links -->
+            <div class="nav-desktop space-x-8 text-sm font-medium uppercase tracking-widest">
                 <a href="/" class="nav-link text-gray-300 no-underline">Alpha</a>
                 <a href="/indicator/" class="text-[#00ff9d] no-underline">Indicator</a>
                 <a href="/telegram/" class="nav-link text-gray-300 no-underline">Signals</a>
-                <a href="mailto:indicator@quanticorn.com" class="nav-link text-gray-300 no-underline">Support</a>
+                <a href="mailto:indicator@quanticorn.com" class="nav-link text-gray-300 no-underline">Contact</a>
             </div>
+
+            <!-- Mobile hamburger -->
+            <button class="nav-burger" onclick="toggleMobileNav()">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile dropdown -->
+        <div id="mobileNav" class="nav-mobile">
+            <a href="/">Alpha</a>
+            <a href="/indicator/" class="active">Indicator</a>
+            <a href="/telegram/">Signals</a>
+            <a href="mailto:indicator@quanticorn.com">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="py-20 px-4 text-center bg-gradient-to-b from-[#16213e] to-black">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Price Inefficiency <span class="text-[#00ff9d] glow-green">Detection</span>
         </h1>
-        <p class="max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 mb-10">
             The official quantitative model for NQ, ES, MNQ, and MES.
             Identify institutional liquidity gaps and high-probability trade setups in real-time.
         </p>
-        <div class="flex justify-center gap-4">
+        <div class="flex flex-col md:flex-row justify-center gap-4">
             <a href="#pricing" class="bg-[#00ff9d] text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#05d686] no-underline">
                 Get Access Now
             </a>
@@ -84,10 +135,57 @@
         </div>
     </section>
 
+    <!-- See It In Action Section -->
+    <section class="max-w-6xl mx-auto py-20 px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+            See It In <span class="text-[#00ff9d]">Action</span>
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <!-- Trade Setup Table -->
+            <div class="card p-6 rounded-2xl overflow-hidden">
+                <img src="https://cdn.abacus.ai/images/fa79c4d3-9424-49d6-921a-bf803e72720e.png" alt="Trade Setup Table" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Trade Setup Table</h3>
+                <p class="text-gray-400 text-sm">
+                    Real-time table showing entry price, stop-loss, partial take-profit (1R), full take-profit (3R), direction, contracts, and risk in USD. Everything you need at a glance.
+                </p>
+            </div>
+            
+            <!-- Indicator Labels Overview -->
+            <div class="card p-6 rounded-2xl overflow-hidden">
+                <img src="https://cdn.abacus.ai/images/e2285164-2565-49e7-9d75-503ba863cba8.png" alt="Indicator Labels Overview" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Indicator Labels Overview</h3>
+                <p class="text-gray-400 text-sm">
+                    Color-coded labels on the chart identify potential setups, entry points, partial exits, and full exits. Instantly recognize high-probability opportunities across multiple timeframes.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Customisable Parameters -->
+            <div class="card p-6 rounded-2xl overflow-hidden">
+                <img src="https://cdn.abacus.ai/images/a40b7f9e-a202-4452-b322-73436cf78bda.png" alt="Customisable Parameters" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Customisable Parameters</h3>
+                <p class="text-gray-400 text-sm">
+                    Fine-tune the indicator with adjustable inputs (P1–P7), target R, partial settings, and risk per trade. Adapt the model to your trading style and risk tolerance.
+                </p>
+            </div>
+            
+            <!-- Trade Play-Out -->
+            <div class="card p-6 rounded-2xl overflow-hidden">
+                <img src="https://cdn.abacus.ai/images/dc3885fd-9603-4277-baad-c9778c458865.png" alt="Trade Play-Out" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Trade Play-Out Example</h3>
+                <p class="text-gray-400 text-sm">
+                    Watch a complete trade from setup detection through entry, partial exit, and final exit. This example shows a +2R win on MNQ with precise label guidance at every step.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-[#050505]">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16">
                 Choose Your <span class="text-[#00ff9d]">License</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-8">
@@ -143,7 +241,7 @@
 
     <!-- Access Flow Section -->
     <section id="how-to" class="max-w-4xl mx-auto py-20 px-4">
-        <h2 class="text-3xl font-bold mb-10 text-center">How Access Works</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center">How Access Works</h2>
         <div class="space-y-8">
             <div class="flex gap-6">
                 <div class="bg-[#111] w-12 h-12 rounded-full flex items-center justify-center font-bold text-[#00ff9d] border border-[#333] shrink-0">1</div>
@@ -188,7 +286,7 @@
 
     <!-- FAQ Section -->
     <section class="max-w-4xl mx-auto py-20 px-4 bg-[#050505] rounded-2xl">
-        <h2 class="text-3xl font-bold mb-10 text-center">Questions?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center">Questions?</h2>
         <div class="space-y-6">
             <div>
                 <h4 class="text-lg font-bold text-[#00ff9d] mb-2">What if I forget my TradingView username?</h4>
@@ -219,13 +317,21 @@
     </section>
 
     <footer class="py-10 border-t border-gray-800 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 Quanticorn Alpha. All rights reserved.</p>
+        <p>© 2026 Quanticorn Alpha. All rights reserved.</p>
         <p class="mt-2">
             <a href="mailto:indicator@quanticorn.com" class="text-[#00ff9d] hover:underline">
                 indicator@quanticorn.com
             </a>
         </p>
     </footer>
+
+    <script>
+    // Mobile nav toggle
+    function toggleMobileNav(){
+        var el = document.getElementById('mobileNav');
+        el.style.display = (el.style.display === 'flex') ? 'none' : 'flex';
+    }
+    </script>
 
 </body>
 </html>
