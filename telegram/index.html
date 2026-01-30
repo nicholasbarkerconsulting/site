@@ -12,7 +12,14 @@
     <link rel="manifest" href="../site.webmanifest">
     
     <style>
-        body{font-family:Arial,sans-serif;margin:0;background:#0a0a0a;color:#eee;line-height:1.7;}
+        body{
+            font-family:Arial,sans-serif;
+            margin:0;
+            background:#0a0a0a;
+            color:#eee;
+            line-height:1.7;
+            overflow-x:hidden;
+        }
         .c{max-width:1100px;margin:0 auto;padding:20px;}
         
         /* Navigation */
@@ -23,6 +30,26 @@
         .nav-links{display:flex;gap:40px;font-size:0.85em;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;}
         .nav-links a{color:#eee;text-decoration:none;transition:color 0.2s;}
         .nav-links a:hover,.nav-links a.active{color:#00ff9d;}
+        
+        .nav-desktop { display:flex; }
+        .nav-burger { display:none; }
+
+        .nav-mobile{
+            display:none;
+            flex-direction:column;
+            gap:12px;
+            padding:12px 20px 16px;
+            background:#000;
+            border-bottom:1px solid #333;
+        }
+        .nav-mobile a{
+            color:#eee;
+            text-decoration:none;
+            font-size:0.9em;
+            text-transform:uppercase;
+            letter-spacing:1.4px;
+        }
+        .nav-mobile a.active{ color:#00ff9d; }
         
         .hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);}
         h1{font-size:3.2em;margin:0;letter-spacing:1px;}
@@ -37,6 +64,37 @@
         .small{font-size:0.95em;color:#aaa;margin-top:30px;}
         .highlight{color:#00ff9d;font-weight:bold;}
         .disclaimer{background:#0f0f0f;padding:30px;border-radius:8px;margin:60px 0;font-size:0.9em;color:#999;line-height:1.6;}
+
+        @media (max-width: 768px){
+            .nav-links.nav-desktop{ display:none; }
+            .nav-burger{
+                display:block;
+                background:none;
+                border:none;
+                color:#eee;
+                font-size:1.6em;
+                cursor:pointer;
+            }
+            h1{
+                font-size:2.1em;
+            }
+            h2{
+                font-size:1.6em;
+            }
+            .hero{
+                padding:60px 16px;
+            }
+            .box{
+                padding:30px 20px;
+            }
+            .stats-box{
+                padding:20px;
+            }
+            ul{
+                font-size:1em;
+                padding-left:20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -45,12 +103,27 @@
 <nav>
     <div class="nav-container">
         <a href="/" class="nav-logo"><span class="q">Q</span>UANTICORN</a>
-        <div class="nav-links">
+
+        <!-- Desktop links -->
+        <div class="nav-links nav-desktop">
             <a href="/">Alpha</a>
             <a href="/indicator/">Indicator</a>
             <a href="/telegram/" class="active">Signals</a>
             <a href="mailto:telegram@quanticorn.com">Contact</a>
         </div>
+
+        <!-- Mobile hamburger -->
+        <button class="nav-burger" onclick="toggleMobileNav()">
+            ☰
+        </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobileNav" class="nav-mobile">
+        <a href="/">Alpha</a>
+        <a href="/indicator/">Indicator</a>
+        <a href="/telegram/" class="active">Signals</a>
+        <a href="mailto:telegram@quanticorn.com">Contact</a>
     </div>
 </nav>
 
@@ -74,11 +147,11 @@
 
     <div class="stats-box">
         <h3>Live Performance Snapshot</h3>
-        <p><span class="highlight">Total Trades (All-Time):</span> 181</p>
-        <p><span class="highlight">Cumulative R (All-Time):</span> +35.0R</p>
-        <p><span class="highlight">Win Rate (All-Time):</span> 39.2%</p>
+        <p><span class="highlight">Total Trades (All-Time):</span> 179</p>
+        <p><span class="highlight">Cumulative R (All-Time):</span> +34.0R</p>
+        <p><span class="highlight">Win Rate (All-Time):</span> 39.1%</p>
         <p><span class="highlight">Recent ~30 Days (25 trades):</span> +14.0, 52.0% Win Rate</p>
-        <p style="margin-top:20px;font-size:0.95em;color:#aaa;">Bot Started: Jul 20, 2025 • Last trade: Jan 29, 2026</p>
+        <p style="margin-top:20px;font-size:0.95em;color:#aaa;">Bot Started: Jul 20, 2025 • Last trade: Jan 28, 2026</p>
         
         <!-- Placeholder for equity curve – replace with your actual chart URL -->
         <img src="equity_curve.png"
@@ -123,5 +196,13 @@
         <p style="margin-top:15px;">By subscribing, you acknowledge that you understand these risks and are solely responsible for your trading decisions.</p>
     </div>
 </div>
+
+<script>
+// Mobile nav toggle
+function toggleMobileNav(){
+    var el = document.getElementById('mobileNav');
+    el.style.display = (el.style.display === 'flex') ? 'none' : 'flex';
+}
+</script>
 </body>
 </html>
