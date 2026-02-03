@@ -136,52 +136,79 @@
     </section>
 
     <!-- See It In Action Section -->
-    <section class="max-w-6xl mx-auto py-20 px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
-            See It In <span class="text-[#00ff9d]">Action</span>
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-12 mb-16">
-            <!-- Trade Setup Table -->
-            <div class="card p-6 rounded-2xl overflow-hidden">
-                <img src="https://cdn.abacus.ai/images/fa79c4d3-9424-49d6-921a-bf803e72720e.png" alt="Trade Setup Table" class="w-full rounded-lg mb-4">
-                <h3 class="text-xl font-bold mb-2">Trade Setup Table</h3>
-                <p class="text-gray-400 text-sm">
-                    Real-time table showing entry price, stop-loss, partial take-profit (1R), full take-profit (3R), direction, contracts, and risk in USD. Everything you need at a glance.
-                </p>
-            </div>
-            
-            <!-- Indicator Labels Overview -->
-            <div class="card p-6 rounded-2xl overflow-hidden">
-                <img src="https://cdn.abacus.ai/images/e2285164-2565-49e7-9d75-503ba863cba8.png" alt="Indicator Labels Overview" class="w-full rounded-lg mb-4">
-                <h3 class="text-xl font-bold mb-2">Indicator Labels Overview</h3>
-                <p class="text-gray-400 text-sm">
-                    Color-coded labels on the chart identify potential setups, entry points, partial exits, and full exits. Instantly recognize high-probability opportunities across multiple timeframes.
-                </p>
-            </div>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-white mb-10">
+        See It In <span class="text-emerald-400">Action</span>
+      </h2>
+    
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Trade Setup Table -->
+        <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40">
+          <img
+            src="https://cdn.abacus.ai/images/a7597c7e-975e-4db0-8af9-61ad1bb3843b.png"
+            alt="Quanticorn Trade Setup Table on dark TradingView chart"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-white mb-2">Trade Setup Table</h3>
+            <p class="text-sm text-zinc-300">
+              Real-time table showing entry price, stop-loss, partial take profit, full take profit, direction,
+              contracts, and risk in USD. Everything you need to place the trade as a limit order at a glance.
+            </p>
+          </div>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Customisable Parameters -->
-            <div class="card p-6 rounded-2xl overflow-hidden">
-                <img src="https://cdn.abacus.ai/images/a40b7f9e-a202-4452-b322-73436cf78bda.png" alt="Customisable Parameters" class="w-full rounded-lg mb-4">
-                <h3 class="text-xl font-bold mb-2">Customisable Parameters</h3>
-                <p class="text-gray-400 text-sm">
-                    Fine-tune the indicator with adjustable inputs (P1–P7), target R, partial settings, and risk per trade. Adapt the model to your trading style and risk tolerance.
-                </p>
-            </div>
-            
-            <!-- Trade Play-Out -->
-            <div class="card p-6 rounded-2xl overflow-hidden">
-                <img src="https://cdn.abacus.ai/images/dc3885fd-9603-4277-baad-c9778c458865.png" alt="Trade Play-Out" class="w-full rounded-lg mb-4">
-                <h3 class="text-xl font-bold mb-2">Trade Play-Out Example</h3>
-                <p class="text-gray-400 text-sm">
-                    Watch a complete trade from setup detection through entry, partial exit, and final exit. This example shows a +2R win on MNQ with precise label guidance at every step.
-                </p>
-            </div>
+    
+        <!-- Backtest Stats Table -->
+        <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40">
+          <img
+            src="https://cdn.abacus.ai/images/c32f6a30-5a78-4d81-a837-367e0dc9c56a.png"
+            alt="Quanticorn Backtest Stats Table with recent performance metrics"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-white mb-2">Backtest Stats Table</h3>
+            <p class="text-sm text-zinc-300">
+              Live performance snapshot of your current p-settings: trades, PnL, total R, win rate, max drawdown,
+              and win/loss streaks. Updates instantly when you adjust parameters so you can see how a configuration
+              has behaved recently.
+            </p>
+          </div>
         </div>
+    
+        <!-- Winning Trade Example -->
+        <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40">
+          <img
+            src="https://cdn.abacus.ai/images/2838c45c-1bb1-43e6-ba86-e53614da429a.png"
+            alt="Quanticorn winning trade sequence with labels and stats"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-white mb-2">Winning Trade Walkthrough</h3>
+            <p class="text-sm text-zinc-300">
+              A full trade sequence: setup detection, entry, partial, and full target with the stats table visible.
+              Immediately see how the model structures trades around price inefficiencies and manages risk.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Customisable Parameters -->
+        <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40">
+          <img
+            src="https://cdn.abacus.ai/images/db62f666-7081-478d-b077-48d83119dece.png"
+            alt="Quanticorn indicator user settings showing P1–P7 and risk controls"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-white mb-2">Customisable Parameters</h3>
+            <p class="text-sm text-zinc-300">
+              Fine-tune the model with adjustable inputs (P1–P7), target R, partials, risk per trade in USD,
+              trading hours, and table positioning. Use our official presets from Discord or adapt them to your
+              own style and risk tolerance.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-
     <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-[#050505]">
         <div class="max-w-4xl mx-auto px-4 text-center">
