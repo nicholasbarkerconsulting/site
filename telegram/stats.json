@@ -1,10 +1,10 @@
 {
-  "total_trades": 258,
-  "total_R": 42.0,
-  "win_rate": 38.4,
-  "month_trades": 23,
-  "month_R": 10.0,
-  "month_win_rate": 47.8,
+  "total_trades": 260,
+  "total_R": 40.0,
+  "win_rate": 38.1,
+  "month_trades": 24,
+  "month_R": 6.0,
+  "month_win_rate": 41.7,
   "start_date": "2025-07-20T02:14:41-04:00",
-  "last_trade": "2026-04-16T12:07:27-04:00"
+  "last_trade": "2026-04-17T16:15:06-04:00"
 }
